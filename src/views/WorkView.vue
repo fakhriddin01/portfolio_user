@@ -46,6 +46,9 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.scaleimg:hover {
+    transform: scale(4);
+    transform-origin: top left;
+}
 </style>
