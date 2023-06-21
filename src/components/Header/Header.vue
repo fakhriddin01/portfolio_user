@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto">
-        <div class="flex items-center justify-end">
-            <div class="flex w-full justify-end items-center px-2 md:px-[60px]  md:py-[27px] text-[20px] font-[500] gap-[33px] " :class="isHidden ? 'hidden': '' ">
+        <div class="flex items-center justify-end h-[85px]">
+            <div class="flex md:flex w-full justify-end items-center px-2 md:px-[60px]  md:py-[27px] text-[20px] font-[500] gap-4 md:gap-[33px]" :class="isHidden ? 'hidden md:flex' : '' ">
                 <router-link to='/'><p>Home</p></router-link>   
                 <router-link to='/works'><p>Works</p></router-link>   
                 <router-link to='/blog'><p>Blog</p></router-link>   
@@ -18,13 +18,13 @@
 import { RouterLink, RouterView } from 'vue-router'
 import {ref} from 'vue'
 
-const isHidden = ref(false)
+const isHidden = ref(true)
 
 const togleMenu = () =>{
     isHidden.value = !isHidden.value;
 }
 </script>
 
-<style lang="" scoped>
+<style scoped>
 
 </style>

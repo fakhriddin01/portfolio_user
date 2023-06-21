@@ -1,8 +1,8 @@
 <template>
-   <div class="px-[148px]  justify-between bg-white py-[15px]">
+   <div class="px-3 lg:px-[148px] min-h-[calc(100vh-190px)]  justify-between bg-white py-[15px]">
       
-        <div class="flex bg-[#bdecf9] rounded-xl">
-            <div class="pl-[110px] pt-[40px] pb-[200px] w-[40%] relative flex flex-col justify-between items-start gap-10 text-[20px] ">
+        <div class=" lg:flex bg-[#bdecf9] rounded-xl">
+            <div class=" pl-4 lg:pl-[110px] pt-[40px] pb-[150px] lg:pb-[200px] lg:w-[40%] relative flex flex-col justify-between items-start gap-10 text-[20px] ">
                 <div class="flex items-center w-full">
                     <h2 class="text-[34px] font-[600]">CONTACT</h2>
                     <div class="border-2 border-black w-full h-[2px]">
@@ -17,25 +17,25 @@
                 </div>
             </div>
                     
-                <form @submit.prevent="sendMessage" class="w-[60%] px-[66px] pt-[40px] pb-[40px] grid grid-cols-5 gap-[10px]">
+                <form @submit.prevent="sendMessage" class=" lg:w-[60%] px-4 lg:px-[66px] pt-[10px] lg:pt-[40px] pb-[40px] grid grid-cols-5 gap-[10px]">
                     <div class="col-span-2">
                         <label for="start" class="block mb-2 text-sm font-medium">Your name</label>
-                        <input type="text" v-model="message.username" name="link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-600 block w-full p-2" placeholder="" required="">
+                        <input type="text" v-model="message.username" name="link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 block w-full p-2" placeholder="" required="">
                     </div>
                     <div class="col-span-3">
                         <label for="start" class="block mb-2 text-sm font-medium">Your email</label>
-                        <input type="email" v-model="message.email" name="link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-600 block w-full p-2" placeholder="" required="">
+                        <input type="email" v-model="message.email" name="link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 block w-full p-2" placeholder="" required="">
                     </div>
                     <div class="col-span-5">
                         <label for="start" class="block mb-2 text-sm font-medium">Subject</label>
-                        <input type="text" v-model="message.subject" name="link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-600 block w-full p-2" placeholder="" required="">
+                        <input type="text" v-model="message.subject" name="link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 block w-full p-2" placeholder="" required="">
                     </div>
                     <div class="col-span-5">
                         <label for="start" class="block mb-2 text-sm font-medium">Message</label>
-                        <textarea rows="5" cols="" v-model="message.message" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-600 block w-full p-2"></textarea>
+                        <textarea rows="5" cols="" v-model="message.message" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 block w-full p-2"></textarea>
                     </div>
-                    <button type="submit" class=" flex items-center justify-center gap-2 hover:text-white focus:ring-2  bg-[#f29494fd] rounded-md"><i class='bx bx-mail-send'></i> Send</button>
 
+                    <button type="submit" class=" w-[100px] h-[40px] flex items-center justify-center gap-2 hover:text-white focus:ring-2  bg-[#f29494fd] rounded-lg"><i class='bx bx-mail-send'></i> Send</button>
                 </form>
             
         </div>

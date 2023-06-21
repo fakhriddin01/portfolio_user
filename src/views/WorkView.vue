@@ -1,12 +1,12 @@
 <template>
     <Header/>
-    <div class="container mx-auto px-[265px] py-[80px]">
-        <h1 class="text-[44px] font-[700]">Works</h1>
+    <div class="container mx-auto px-3 min-h-[calc(100vh-190px)] lg:px-[265px] py-4 lg:py-[80px]">
+        <h1 class="text-[34px] lg:text-[44px] font-[700]">Works</h1>
         <div>
-              <div class="flex flex-col my-6 gap-4">
+              <div class="flex flex-col my-3 lg:my-6 gap-5">
                 <div v-for="el in projects" :key="el.id" class=" rounded-lg shadow bg-white ">
-                    <div class="p-[24px] flex gap-4">
-                        <img :src="el.image" alt="" class="w-[250px] scaleimg duration-500 ">
+                    <div class="p-2 lg:p-[24px] flex flex-col lg:flex-row lg:gap-5">
+                        <img :src="el.image" alt="" class="w-full lg:w-[260px] lg:hover:scale-[4] lg:origin-left duration-500 ">
                         <div class="flex flex-col gap-2">
                             <h1 class="text-[26px] font-[700]">{{el.name}}</h1>
                             <p class="text-[20px]">{{el.description}}</p>
