@@ -1,23 +1,23 @@
-name: Deploy to Ubuntu Server
+name: Vue.js CI/CD
 
-on:
-  push:
-    branches: [ "main" ]
+on: [push] # tells github to run this on any push to the repository
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
+    if: github.ref == 'refs/heads/main' # we tell Github to only execute this step if we're on our master branch (so we don't put unfinished branches in production)
     steps:
-    # Step 1: Checkout code
-    - uses: actions/checkout@v3
-
-    # Step 2: Set up Node.js
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20.x 
-
-    # Step 3: Install dependencies and build
-    - run: |
-        npm install
-        npm run build  # Run build command if your project has one
+      - name: Deploying to Digitalocean droplet
+        uses: appleboy/ssh-action@master # An action made to control Linux servers
+        with: # We set all our secrets here for the action, these won't be shown in the action logs
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /home/gitactions/portfolio_user # we move into our app's folder
+            git pull # we pull any changes from git
+            npm prune # we remove any unused dependencies
+            npm install # we install any missing dependencies
+            npm run build # we build our app
