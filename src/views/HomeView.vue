@@ -6,8 +6,7 @@
                 <div class="lg:w-[55%] text-[#21243D] pt-[40px]">
                     <h1 class="text-[34px] lg:text-[44px] text-center lg:text-left font-[700]">Hi, I am Fakhriddin,</h1>
                     <h1 class="text-[34px] lg:text-[44px] text-center lg:text-left font-[700] mb-[25px]">Full-Stack Web Developer</h1>
-                    <p class="text-[14px] text-justify">I am a highly motivated Junior Web Developer proficient in <b>Node.js</b> and <b>Vue.js</b>. I have hands-on experience with SQL and NoSQL databases, specifically MongoDB and PostgreSql, utilizing frameworks like NEST.js and EXPRESS.js.
-                    <br>I am eager to join a dynamic team where I can leverage my skills to contribute to the organization's success. Despite my limited experience in web development, I am confident that the valuable life experience gained from my previous jobs will enhance my growth as an professional, benefiting both the company and myself.</p>
+                    <p class="text-[14px] text-justify"> Full-Stack Web Developer with a proven track record at <b>COSCOM LLC</b>, enhancing in-house app functionality and performance through expertise in <b>JavaScript</b>, <b>Vue.js</b>, and <b>Node.js</b>. Skilled in API integration and adept at problem-solving to support and add new features to an internal tool for a telecommunications company. Excels in team building and professional communication, ensuring project success and customer satisfaction. Experienced in both frontend and backend development, with hands-on involvement in data collection, report preparation, map development, and the creation of diverse tools for the in-house website. </p>
                     
                      <div class="flex justify-between items-center py-5">
                         <div >
@@ -32,17 +31,17 @@
                     </div>
                   
                     <div class="text-[24px] mt-[30px] flex gap-5">
-                        <a v-for="el in network" :key="el.id" :href="el.link" target="blank"><i :class="el.icon"></i></a>
+                        <a v-for="el in network" :key="el.id" :href="el.name === 'Gmail' ? `mailto:${el.link}` : el.link" target="_blank"><i :class="el.icon"></i></a>
                     </div>
-                    <a href="https://drive.google.com/file/d/1S5u-sO6PiVb88dLyh_df_rAqHLBDrxPS/view?usp=drive_link" target="blank" class="bg-[#489dc289] hover:bg-[#ff8080fd]  text-white px-5 py-2 rounded-lg mt-[15px] flex items-center gap-2"><i class='bx bx-cloud-download text-[22px]'></i>Download CV</a>
+                    <a href="https://drive.google.com/file/d/1pj94aeVX0cBf4ihoXqy0RFrW1CUvDsEC/view?usp=drive_link" target="blank" class="bg-[#489dc289] hover:bg-[#ff8080fd]  text-white px-5 py-2 rounded-lg mt-[15px] flex items-center gap-2"><i class='bx bx-cloud-download text-[22px]'></i>Download CV</a>
 
                 </div>
             </div>
         </div>
 
+        <Experience/>
         <Works/>
-        <Recent/>
-        <!-- <Contact/> -->
+        <!-- <Recent/> -->
     </div>
     <Footer/>
 </template>
@@ -52,8 +51,8 @@ import Header from '../components/Header/Header.vue'
 import Footer from '../components/Footer/Footer.vue'
 import Badge from '../components/Badge/Badge.vue'
 import Recent from '../components/Recent/Recent.vue'
+import Experience from '../components/Experience/Experience.vue'
 import Works from '../components/Works/Works.vue'
-import Contact from '../components/Contact/Contact.vue'
 import {onMounted, ref} from 'vue'
 import {useInfo} from '../service/getInfo'
 

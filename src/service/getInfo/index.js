@@ -7,4 +7,5 @@ export const useInfo = {
     getPosts: () => axios.get("/post/active"),       
     getOnePost: (id) => axios.get(`/post/${id}`),       
     getProject: () => axios.get(`/project`),       
+    getExperience: () => axios.get(`/experience`),       
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="px-3 lg:px-[148px]  justify-between bg-[#EDF7FA] pb-[50px]">
+    <div class="px-3 lg:px-[148px]  justify-between bg-white pb-[50px]">
             <div class="flex justify-between items-end py-[27px]">
                 <h1 class="text-[22px]">Featured works</h1>
                 <router-link to='/works' class="text-[#00A8CC]">View all</router-link>

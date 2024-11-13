@@ -4,6 +4,7 @@ import BlogView from '../views/BlogView.vue'
 import OneBlogView from '../views/OneBlogView.vue'
 import ContactView from '../views/ContactView.vue'
 import WorkView from '../views/WorkView.vue'
+import ExperienceView from '../views/ExperienceView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,10 +14,15 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+    // {
+    //   path: '/blog',
+    //   name: 'blog',
+    //   component: BlogView
+    // },
     {
-      path: '/blog',
-      name: 'blog',
-      component: BlogView
+      path: '/experience',
+      name: 'experience',
+      component: ExperienceView
     },
     {
       path: '/blog/:id',
